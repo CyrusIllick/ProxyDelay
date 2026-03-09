@@ -1,0 +1,30 @@
+{
+  "experiment_name": "quickstart_two_flow",
+  "flow_mode": "two_flow",
+  "ccas": ["bbr1", "bbr1"],
+  "runtime": {
+    "duration_sec": 30,
+    "reps": 1,
+    "skip_existing": true
+  },
+  "network": {
+    "bw_mbit": 200,
+    "base_rtt_ms": 8,
+    "bdp_of_buf": 0.5,
+    "loss_pct": 0,
+    "flow_start_interval_sec": 0,
+    "qdisc": "",
+    "pcap_bytes": 0,
+    "cmd": "sysctl -q -w net.ipv4.tcp_ecn=0"
+  },
+  "proxy": {
+    "proxy_on_values": [0, 1],
+    "proxy_init_ms": 100
+  },
+  "sweep": {
+    "a_delay_ms": [6, 20],
+    "b_delay_ms": [6, 20],
+    "c_delay_ms": [0],
+    "d_delay_ms": [0]
+  }
+}

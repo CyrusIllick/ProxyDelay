@@ -1,0 +1,30 @@
+{
+  "experiment_name": "two_flow_custom_ccas",
+  "flow_mode": "two_flow",
+  "ccas": ["bbr", "cubic"],
+  "runtime": {
+    "duration_sec": 100,
+    "reps": 2,
+    "skip_existing": true
+  },
+  "network": {
+    "bw_mbit": 200,
+    "base_rtt_ms": 8,
+    "bdp_of_buf": 0.5,
+    "loss_pct": 0,
+    "flow_start_interval_sec": 0,
+    "qdisc": "",
+    "pcap_bytes": 0,
+    "cmd": "sysctl -q -w net.ipv4.tcp_ecn=0"
+  },
+  "proxy": {
+    "proxy_on_values": [0, 1],
+    "proxy_init_ms": 100
+  },
+  "sweep": {
+    "a_delay_ms": [10, 20, 30, 40],
+    "b_delay_ms": [10, 20, 30, 40],
+    "c_delay_ms": [0],
+    "d_delay_ms": [0]
+  }
+}

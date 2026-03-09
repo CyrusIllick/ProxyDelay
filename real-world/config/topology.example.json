@@ -1,0 +1,45 @@
+{
+  "usernames": [
+    "your_ssh_username"
+  ],
+  "gcp_zones": [
+    "us-east4-a",
+    "us-central1-a"
+  ],
+  "aws_zones": [
+    "us-east-1"
+  ],
+  "congestion_control_algorithms": [
+    "reno",
+    "bbr",
+    "bbr1",
+    "cubic",
+    "westwood",
+    "hybla",
+    "illinois"
+  ],
+  "cloud_interface_name": "enp0s4",
+  "aws_instance_interface_name": "eth0",
+  "ssh_private_key_path": "",
+  "report_root": "reports",
+  "local_servers": [
+    {
+      "role": "netserver",
+      "instance_name": "local-netserver-1",
+      "external_ip_address": "203.0.113.10",
+      "interface_name": "eth0"
+    },
+    {
+      "role": "netperf",
+      "instance_name": "local-netperf-1",
+      "external_ip_address": "203.0.113.20",
+      "interface_name": "eth0"
+    },
+    {
+      "role": "netperf",
+      "instance_name": "local-netperf-2",
+      "external_ip_address": "203.0.113.21",
+      "interface_name": "eth0"
+    }
+  ]
+}
